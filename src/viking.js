@@ -78,8 +78,8 @@ class War {
   //     }
   //     return attack;
   //   }
-    
-    //Iteration 5
+
+  //Iteration 5
   showStatus() {
     if (this.saxonArmy.length > 0 && this.vikingArmy.length > 0)
       return "Vikings and Saxons are still in the thick of battle.";
@@ -93,12 +93,12 @@ class War {
   //refactoring
   armyAttack(attackingArmy, attackedArmy) {
     const attackingSoldier =
-      attackingArmy[parseInt(Math.random() * attackingArmy.length)];
+      attackingArmy[Math.floor(Math.random() * attackingArmy.length)];
     const attackedSoldier =
       attackedArmy[parseInt(Math.random() * attackedArmy.length)];
-    const attack = attackedViking.receiveDamage(attackingSaxon.attack());
-    if (attackedViking.health <= 0) {
-      const index = attackedArmy.indexOf(attackedViking);
+    const attack = attackedSoldier.receiveDamage(attackingSoldier.attack());
+    if (attackedSoldier.health <= 0) {
+      const index = attackedArmy.indexOf(attackedSoldier);
       attackedArmy.splice(index, 1);
     }
     return attack;
