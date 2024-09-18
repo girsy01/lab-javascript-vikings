@@ -78,6 +78,8 @@ class War {
   //     }
   //     return attack;
   //   }
+    
+    //Iteration 5
   showStatus() {
     if (this.saxonArmy.length > 0 && this.vikingArmy.length > 0)
       return "Vikings and Saxons are still in the thick of battle.";
@@ -88,7 +90,6 @@ class War {
         return "Saxons have fought for their lives and survived another day...";
     }
   }
-
   //refactoring
   armyAttack(attackingArmy, attackedArmy) {
     const attackingSoldier =
